@@ -893,7 +893,151 @@ footer img {
 .footer_special {
   display: none;
 }
+/*project page styling*/
 
+.content_child span:nth-child(1) {
+  padding-bottom: 2.2rem;
+  color: white;
+}
+.content_child div:nth-child(2) {
+  padding-bottom: 1.5rem;
+}
+.content_child div:nth-child(3) {
+  padding-bottom: 1.5rem;
+}
+.content_child div:nth-child(4) {
+  padding-bottom: 1.5rem;
+}
+.content_child div:nth-child(5) {
+  padding-bottom: 1.5rem;
+}
+.projects_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.projects_head {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+  margin-top: 2rem;
+}
+.projects_head span {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: white;
+}
+.empty-project {
+  width: 9rem;
+  height: 0.25rem;
+  background-color: #ca4545;
+}
+.empty-project::before {
+  content: "";
+  color: white;
+  border-bottom: 3px solid #ca4545;
+  width: 7rem;
+  position: absolute !important;
+  left: 24.65%;
+  top: 51px !important;
+}
+.empty-project::after {
+  content: "";
+  color: white;
+  border-bottom: 3px solid #ca4545;
+  width: 7rem;
+  position: absolute !important;
+  left: 24.65%;
+  top: 70px !important;
+}
+.empty1-project{
+  width: 9rem;
+  height: 0.25rem;
+  background-color: #ca4545;
+}
+.empty1-project::before {
+  content: "";
+  color: white;
+  border-bottom: 3px solid #ca4545;
+  width: 7rem;
+  position: absolute !important;
+  right: 24.65%;
+  top: 51px !important;
+}
+.empty1-project::after {
+  content: "";
+  color: white;
+  border-bottom: 3px solid #ca4545;
+  width: 7rem;
+  position: absolute !important;
+  right: 24.65%;
+  top: 70px !important;
+}
+.project_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+.iframe-fallback{
+  width: 33.5%;
+  height: 37.5vh;
+  background-image: url(./images/gamal\ abd\ el\ nasser\ musem6.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  border: 4px solid black;
+}
+iframe{
+  border-radius: 10px;
+  border: 4px solid black;
+  object-fit: cover;
+  width: 100%;
+  height: 37.5vh;
+}
+.content_child {
+  display: flex;
+  flex-direction: column;
+}
+.Authority_desc {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ca4545 !important;
+}
+.clients {
+  font-weight: 500;
+  color: white !important;
+}
+.project_preview {
+  margin: 4rem 0rem;
+}
+.project_img {
+  width: 28.2rem;
+  height: 17rem;
+  border: 0px solid black;
+  border-radius: 25px;
+  padding: 0rem 1rem;
+}
+.prject-carousel-indicators{
+  bottom: -25px !important;
+}
+.prject-carousel-indicators li{
+    width: 1rem;
+    height: 1rem;
+    border: 0px solid transparent;
+    border-radius: 50%;
+    background-color: #ca4545;
+}
+.prject-carousel-indicators .active {
+    background-color: #ca4545b0;
+}
 @media (min-width: 320px) and (max-width: 500px) {
   .carousel {
     display: flex;
@@ -1635,6 +1779,22 @@ footer img {
   }
   .custom-carousel-indicators {
     bottom: 4px;
+  }
+  .content_child span:nth-child(1) {
+    padding-bottom: 1.5rem;
+    color: white;
+  }
+  .content_child div:nth-child(2) {
+    padding-bottom: 1rem;
+  }
+  .content_child div:nth-child(3) {
+    padding-bottom: 1rem;
+  }
+  .content_child div:nth-child(4) {
+    padding-bottom: 1rem;
+  }
+  .content_child div:nth-child(5) {
+    padding-bottom: 1rem;
   }
 }
 @media (min-width: 2000px) and (max-width: 2559px) {
