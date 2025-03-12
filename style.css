@@ -3,8 +3,9 @@
   margin: 0px;
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
+  font-family: "Lato", sans-serif;
 }
 .carousel-item {
   height: 50vh;
@@ -20,6 +21,8 @@ html{
   width: 100%;
   color: white;
   text-align: end;
+  object-fit: contain;
+  overflow: hidden;
 }
 
 .slide2 {
@@ -29,8 +32,9 @@ html{
   width: 100%;
   color: white;
   text-align: center;
+  object-fit: contain;
+  overflow: hidden;
 }
-
 .slide3 {
   background-image: url(./images/6.JPG);
   background-position: center;
@@ -38,6 +42,8 @@ html{
   width: 100%;
   color: white;
   text-align: center;
+  object-fit: contain;
+  overflow: hidden;
 }
 .slide4 {
   background-image: url(./images/1.jpeg);
@@ -46,6 +52,8 @@ html{
   width: 100%;
   color: white;
   text-align: center;
+  object-fit: contain;
+  overflow: hidden;
 }
 .logo {
   width: 10rem;
@@ -448,6 +456,7 @@ li .dropdown-toggle {
 .contact1 a:nth-child(3) {
   color: #111;
   text-decoration: none;
+  text-align: center;
 }
 .container {
   text-align: center;
@@ -891,10 +900,52 @@ footer img {
   width: 7rem;
 }
 .footer_special {
-  display: none;
+  display: none !important;
 }
-/*project page styling*/
-
+.custom-nav-ar {
+  margin-right: 6.87rem !important;
+}
+.ar-ul {
+  flex-direction: row-reverse;
+}
+.ar-navlink {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.lang_li_ar img {
+  margin: 2px 11px 0px -17px;
+}
+.pillars2-ar {
+  justify-content: end;
+  flex-direction: row-reverse;
+  padding: 1rem 1rem 0rem 0rem;
+}
+.special_city_ar {
+  width: 7rem;
+  text-align: end;
+}
+.special_city_ar1 {
+  width: 8rem;
+  text-align: end;
+}
+.goverments_child_ar div {
+  width: 25%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  height: 35vh !important;
+}
+.goverment_1_ar{
+  font-weight: 600;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+.goverment_1_ar span::after {
+  content: ".";
+  padding-right: 9px;
+  font-size: 2rem;
+  color: #ca4545;
+}
 .content_child span:nth-child(1) {
   padding-bottom: 2.2rem;
   color: white;
@@ -954,7 +1005,7 @@ footer img {
   left: 24.65%;
   top: 70px !important;
 }
-.empty1-project{
+.empty1-project {
   width: 9rem;
   height: 0.25rem;
   background-color: #ca4545;
@@ -985,22 +1036,56 @@ footer img {
   width: 100%;
   margin-top: 2.5rem;
 }
-.iframe-fallback{
-  width: 33.5%;
-  height: 37.5vh;
-  background-image: url(./images/gamal\ abd\ el\ nasser\ musem6.jpg);
+.iframe-fallback {
+  width: 41%;
+  height: 35vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
   border: 4px solid black;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
-iframe{
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: rgba(255, 0, 0, 0.8); /* Red hover effect */
+}
+
+.lazy-iframe {
   border-radius: 10px;
   border: 4px solid black;
   object-fit: cover;
   width: 100%;
-  height: 37.5vh;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none; /* Hide iframe initially */
 }
 .content_child {
   display: flex;
@@ -1015,8 +1100,13 @@ iframe{
   font-weight: 500;
   color: white !important;
 }
+.project-sec1 {
+  background-color: black;
+  height: 100vh;
+}
 .project_preview {
   margin: 4rem 0rem;
+  height: 30vh;
 }
 .project_img {
   width: 28.2rem;
@@ -1025,19 +1115,104 @@ iframe{
   border-radius: 25px;
   padding: 0rem 1rem;
 }
-.prject-carousel-indicators{
-  bottom: -25px !important;
+.project-slider {
+  position: relative;
+  width: 72%;
+  overflow: hidden;
+  height: 33vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
 }
-.prject-carousel-indicators li{
-    width: 1rem;
-    height: 1rem;
-    border: 0px solid transparent;
-    border-radius: 50%;
-    background-color: #ca4545;
+
+.project-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
-.prject-carousel-indicators .active {
-    background-color: #ca4545b0;
+
+.project-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
+.project-slide img {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-indicators {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.project-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #ca4545;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.project-indicator.active {
+  background-color: #ca4545a6;
+}
+
+.project-prev,
+.project-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #de3737;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.project-prev {
+  left: 10px;
+}
+
+.project-next {
+  right: 10px;
+}
+
+.project-prev:hover,
+.project-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.footer-arabic {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+.footer-arabic .footer_child,
+.footer-arabic .footer1,
+.footer-arabic .footer_special,
+.footer-arabic .footer_child2,
+.footer-arabic .footer_child3,
+.footer-arabic .footer2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end !important;
+}
+
+.footer-arabic a {
+  text-align: right !important;
+  display: block;
+}
+
 @media (min-width: 320px) and (max-width: 500px) {
   .carousel {
     display: flex;
@@ -1487,7 +1662,7 @@ iframe{
     height: 7rem;
     border-radius: 8px;
     object-fit: fill;
-}
+  }
 
   /* this class is in our services section it need to take a new class and apply the following stylings */
   /* .sec_head1 {
@@ -1495,98 +1670,99 @@ iframe{
   width: 100%;
 } */
 
-iframe {
-  border-radius: 10px;
-  border: 4px solid black;
-  object-fit: cover;
-  width: 100%;
-  height: 30.5vh;
-}
-.iframe-fallback {
-  width: 75.5%;
-  height: 31.5vh;
-}
-.projects_head span {
-  font-size: 1rem;
-  text-align: center;
-}
-.empty , .empty1{
-  width: 3rem;
-}
-.empty-projects1::before {
-  content: "";
-  width: 2rem;
-  bottom: 1.39rem;
-  left: 0rem;
-}
-.empty-projects1::before {
-      content: "";
-      width: 2rem;
-      bottom: 1.39rem;
-      left: 0rem;
+  iframe {
+    border-radius: 10px;
+    border: 4px solid black;
+    object-fit: cover;
+    width: 100%;
+    height: 30.5vh;
+  }
+  .iframe-fallback {
+    width: 75.5%;
+    height: 31.5vh;
+  }
+  .projects_head span {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .empty,
+  .empty1 {
+    width: 3rem;
+  }
+  .empty-projects1::before {
+    content: "";
+    width: 2rem;
+    bottom: 1.39rem;
+    left: 0rem;
+  }
+  .empty-projects1::before {
+    content: "";
+    width: 2rem;
+    bottom: 1.39rem;
+    left: 0rem;
   }
   .empty-projects1::after {
-      content: "";
-      width: 2rem;
-      bottom: 1.39rem;
-      left: 0rem;
+    content: "";
+    width: 2rem;
+    bottom: 1.39rem;
+    left: 0rem;
   }
-.empty-projects::after {
-      content: "";
-      width: 2rem;
-      top: -1.8rem;
-      left: 0.96rem;
+  .empty-projects::after {
+    content: "";
+    width: 2rem;
+    top: -1.8rem;
+    left: 0.96rem;
   }
-.empty-projects::before {
-      content: "";
-      width: 2rem;
-      display: inline-block;
-      top: -1.4rem;
-      left: 32%;
-      position: relative;
-      background-color: #ca4552;
+  .empty-projects::before {
+    content: "";
+    width: 2rem;
+    display: inline-block;
+    top: -1.4rem;
+    left: 32%;
+    position: relative;
+    background-color: #ca4552;
   }
-.projects_head {
-  gap: 2%;
-}
-.content_child span:nth-child(1) {
-  padding-bottom: 1.1rem;
-  font-size: 9px;
-  color: white;
-}
-.content_child div:nth-child(2) {
-  padding-bottom: 0.5rem;
-}
-.content_child div:nth-child(3) {
-  padding-bottom: 0.5rem;
-}
+  .projects_head {
+    gap: 2%;
+  }
+  .content_child span:nth-child(1) {
+    padding-bottom: 1.1rem;
+    font-size: 9px;
+    color: white;
+  }
+  .content_child div:nth-child(2) {
+    padding-bottom: 0.5rem;
+  }
+  .content_child div:nth-child(3) {
+    padding-bottom: 0.5rem;
+  }
 
-.content_child div:nth-child(4) {
-  padding-bottom: 0.5rem;
-}
-.content_child div:nth-child(5) {
-  padding-bottom: 0.5rem;
-}
-.clients {
-  font-size: 8px;
-}
-.project_img {
-  /* width: 8.2rem; */
-  width: 33%;
-  height: 5rem;
-  padding: 0rem 0.25rem;
-}
-.carousel-indicators {
-  position: absolute;
-  right: 0;
-  bottom: 0px;
-}
-.carousel-inner {
-  position: relative;
-  width: 100%;
-  height: 12vh;
-  overflow: hidden;
-}
+  .content_child div:nth-child(4) {
+    padding-bottom: 0.5rem;
+  }
+  .content_child div:nth-child(5) {
+    padding-bottom: 0.5rem;
+  }
+  .clients {
+    font-size: 8px;
+  }
+  .project_img {
+    /* width: 8.2rem; */
+    width: 33%;
+    height: 5rem;
+    padding: 0rem 0.25rem;
+  }
+  .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+  }
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 12vh;
+    overflow: hidden;
+  }
 }
 @media (min-width: 501px) and (max-width: 769px) {
   .carousel {
@@ -1828,42 +2004,40 @@ iframe {
   }
   .projects_head span {
     font-size: 2rem;
-}
-.content_child span:nth-child(1) {
+  }
+  .content_child span:nth-child(1) {
     padding-bottom: 1rem;
-}
-.content_child div:nth-child(2) {
+  }
+  .content_child div:nth-child(2) {
     padding-bottom: 0.5rem;
-}
-.content_child div:nth-child(3) {
+  }
+  .content_child div:nth-child(3) {
     padding-bottom: 0.5rem;
-}
-.content_child div:nth-child(4) {
+  }
+  .content_child div:nth-child(4) {
     padding-bottom: 0.5rem;
-}
-.content_child div:nth-child(5) {
+  }
+  .content_child div:nth-child(5) {
     padding-bottom: 0.5rem;
-}
+  }
 
-.project_img {
-       width: 18.2rem;
+  .project_img {
+    width: 18.2rem;
     height: 10rem;
-border-radius: 50px;
-}
+    border-radius: 50px;
+  }
 
-.carousel-indicators-edited{
-    bottom:200px;
-}
-.carousel-control-prev {
+  .carousel-indicators-edited {
+    bottom: 200px;
+  }
+  .carousel-control-prev {
     left: -80px;
     top: -270px;
-}
-.carousel-control-next {
-  right: -80px;
-  top: -270px;
-}
-
-
+  }
+  .carousel-control-next {
+    right: -80px;
+    top: -270px;
+  }
 }
 @media (min-width: 1440px) and (max-width: 1750px) {
   .side_navbar,
@@ -1927,23 +2101,22 @@ border-radius: 50px;
   .content_child div:nth-child(5) {
     padding-bottom: 1rem;
   }
-.project_img {
-  width: 21.2rem;
-  height: 12rem;
-  border-radius: 50px;
-}
-.carousel-indicators-edited{
-  bottom:146px;
-}
-.carousel-control-prev {
-  left: -105px;
-  top: -230px;
-}
-.carousel-control-next {
-  right: -105px;
-  top: -230px;
-}
-
+  .project_img {
+    width: 21.2rem;
+    height: 12rem;
+    border-radius: 50px;
+  }
+  .carousel-indicators-edited {
+    bottom: 146px;
+  }
+  .carousel-control-prev {
+    left: -105px;
+    top: -230px;
+  }
+  .carousel-control-next {
+    right: -105px;
+    top: -230px;
+  }
 }
 @media (min-width: 2000px) and (max-width: 2559px) {
   .side_navbar,
