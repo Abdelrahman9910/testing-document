@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>testing</title>
+    <title>حراء للمقولات</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="shortcut icon" href="./images/Group 1.svg" type="image/x-icon">
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,19 +50,19 @@
             class="close-btn"
             onclick="toggleSideNav()"
             >&times;</a>
-          <a href="./index.html">الرئيسة</a>
-          <a href="#Services">خدماتنا</a>
-          <a href="#about">من نحن</a>
-          <a href="#press">الصحافة والاخبار</a>
-          <a href="./projects.html">المشروعات</a>
+          <a href="./index.html" target="_self">الرئيسة</a>
+          <a href="#Services" target="_self">خدماتنا</a>
+          <a href="#about" target="_self">من نحن</a>
+          <a href="#press" target="_self">الصحافة والاخبار</a>
+          <a href="./project-ar.html">المشروعات</a>
           <a href="#">الوظائف</a>
-          <a href="#contact-us">أتصل بنا</a>
+          <a href="#contact-us" target="_self">أتصل بنا</a>
         </div>
 
         <nav id="custom-nav">
           <ul class="ar-ul">
             <li>
-              <a href="" target="_blank" rel="noopener noreferrer">الرئيسية</a>
+              <a href="./index-ar.html" target="_blank" rel="noopener noreferrer">الرئيسية</a>
             </li>
             <li>
               <a
@@ -78,13 +79,13 @@
               >
             </li>
             <li>
-              <a href="#press" target="_blank" rel="noopener noreferrer"
+              <a href="#press" target="_self" rel="noopener noreferrer"
                 >الصحافة والاخبار</a
               >
             </li>
             <li><img src="./images/Group 1.svg" alt="" class="herra-logo" loading="lazy" /></li>
             <li>
-              <a href="./projects.html" target="_blank" rel="noopener noreferrer"
+              <a href="./project-ar.htm" target="_blank" rel="noopener noreferrer"
                 >المشروعات</a
               >
             </li>
@@ -111,8 +112,8 @@
                 <img src="./images/Vector.svg" alt="language-button" loading="lazy" />
               </a>
               <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                <a class="dropdown-item" href="#">English</a>
-                <a class="dropdown-item" href="#">عربي</a>
+                <a class="dropdown-item" href="./index.html">English</a>
+                <a class="dropdown-item" href="./index-ar.html">عربي</a>
               </div>
             </li>
           </ul>
@@ -586,10 +587,10 @@
   </div>
   <div class="container">
     <div class="nav-links">
-      <a href="#" data-target="slider1" class="active">التغطية الاعلامية</a>
-      <a href="#" data-target="slider2">تنصيب رئاسي</a>
-      <a href="#" data-target="slider3">اللغة الوزارية</a>
-      <a href="#" data-target="slider4">الأوسمة</a>
+      <a href="#slider1" data-target="slider1" class="active">التغطية الاعلامية</a>
+      <a href="#slider2" data-target="slider2">تنصيب رئاسي</a>
+      <a href="#slider3" data-target="slider3">اللغة الوزارية</a>
+      <a href="#slider4" data-target="slider4">الأوسمة</a>
     </div>
     <div id="slider1" class="slider active">
       <div class="slider-content">
@@ -756,16 +757,16 @@
           <span>روابط</span>
           <div class="footer_child2">
             <div class="footer_child3">
-              <a href="">الرئيسة</a>
-              <a href="">من نحن</a>
-              <a href="">تواصل معانا</a>
-              <a href="">خدماتنا</a>
+              <a href="./index-ar.html">الرئيسة</a>
+              <a href="#abou">من نحن</a>
+              <a href="#contact-us">تواصل معانا</a>
+              <a href="#Services">خدماتنا</a>
             </div>
             <div class="footer_child3">
-              <a href="">عملائنا</a>
+              <a href="#clients">عملائنا</a>
               <a href="./projects.html">المشاريع</a>
               <a href="">الوظائف</a>
-              <a href="">الصحافة و الأعلام</a>
+              <a href="#press">الصحافة و الأعلام</a>
             </div>
           </div>
         </div>
@@ -773,14 +774,14 @@
 
       <div class="footer2">
         <span>روابط</span>
-        <a href="">الرئيسة</a>
-        <a href="">من نحن</a>
-        <a href="">تواصل معانا</a>
-        <a href="">خدماتنا</a>
-        <a href="">عملائنا</a>
-        <a href="">المشاريع</a>
+        <a href="./index-ar.html">الرئيسة</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact-us">تواصل معانا</a>
+        <a href="#Services">خدماتنا</a>
+        <a href="#clients">عملائنا</a>
+        <a href="./project-ar.html">المشاريع</a>
         <a href="">الوظائف</a>
-        <a href="">الصحافة و الاعلام</a>
+        <a href="#press">الصحافة و الاعلام</a>
       </div>
     </footer>
     <div class="overlay" id="overlay"></div>
