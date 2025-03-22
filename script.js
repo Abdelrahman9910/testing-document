@@ -37,7 +37,50 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error('File input or file name display not found.');
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  // Counter functionality
+  function startCounter(spanElement, targetNumber) {
+    let currentNumber = 0;
+    const increment = targetNumber / 100;
+    const interval = 20;
 
+    const timer = setInterval(() => {
+      currentNumber += increment;
+      if (currentNumber >= targetNumber) {
+        clearInterval(timer);
+        currentNumber = targetNumber;
+      }
+      spanElement.textContent = Math.floor(currentNumber) + "+";
+    }, interval);
+  }
+
+  const numberSpans = document.querySelectorAll(".circle span:first-child");
+  numberSpans.forEach((span) => {
+    const targetNumber = parseInt(span.textContent);
+    startCounter(span, targetNumber);
+  });
+
+  // Trigger border animation when the counter starts
+  const circles = document.querySelectorAll(".circle");
+  circles.forEach((circle) => {
+    circle.style.animation = "rotateBorder 3s linear forwards";
+  });
+
+  // Rest of your existing JavaScript code...
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const govSection = document.querySelector(".goverments_child");
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        govSection.classList.add("show");
+      }
+    });
+  }, { threshold: 0.7 });
+  
+  observer.observe(govSection);
+});
 // Side navigation functionality
 function toggleSideNav() {
   const sideNav = document.getElementById("sideNav");
