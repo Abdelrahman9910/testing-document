@@ -2053,7 +2053,7 @@ form {
   .sec_head1 {
     font-size: 18px;
     text-align: center;
-    width: 21%;
+    width: 42%;
     margin: 0rem 0rem;
 }
   .empty {
@@ -2116,7 +2116,7 @@ form {
     margin: 1rem 0rem 0rem;
   }
   .circle_Container {
-    width: 76%;
+    width: 100%;
   }
   .circle {
     font-size: 0.5rem !important;
