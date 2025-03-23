@@ -178,6 +178,9 @@ li .dropdown-toggle {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  background-image: url(./images/architec\ bckgrnd.png);
+  background-position: center;
+  background-size: contain;
 }
 .sec_head {
   display: flex;
@@ -194,21 +197,21 @@ li .dropdown-toggle {
   margin-top: 0px;
 }
 .sec_services {
-  margin-bottom: 0px;
+  margin-bottom: -6px;
 }
 .empty {
   width: 11.75rem;
-  height: 5px;
+  height: 4px;
   background-color: #ca4552;
 }
 .empty-projects {
   width: 10rem;
-  height: 5px;
+  height: 4px;
   background-color: #ca4552;
 }
 .empty-projects1 {
   width: 10rem;
-  height: 5px;
+  height: 4px;
   background-color: #ca4552;
 }
 .empty::before {
@@ -227,8 +230,8 @@ li .dropdown-toggle {
   content: "";
   width: 8rem;
   border: 2px solid #ca4545;
-  height: 0px;
-  top: -1.8rem;
+  height: 2px;
+  top: -29px;
   left: 3.8rem;
   display: inline-block;
   position: relative;
@@ -237,7 +240,7 @@ li .dropdown-toggle {
 
 .empty1 {
   width: 11.75rem;
-  height: 5px;
+  height: 4px;
   background-color: #ca4552;
 }
 .empty1::before {
@@ -257,7 +260,7 @@ li .dropdown-toggle {
   width: 8rem;
   border: 2px solid #ca4545;
   height: 0px;
-  bottom: 1.8rem;
+  bottom: 29px;
   left: 0rem;
   display: inline-block;
   position: relative;
@@ -442,34 +445,6 @@ li .dropdown-toggle {
 .head_diffrent {
   margin-bottom: 0.7rem;
 }
-/* #goverments {
-  margin: 3rem 0rem;
-}
-.goverments_child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 4%;
-  margin-top: 1rem;
-}
-.goverments_child img {
-  width: 22%;
-}
-.goverment_1 {
-  font-weight: 600;
-  flex-direction: column;
-  font-size: 1.2rem;
-}
-.goverment_1 span::before {
-  content: ".";
-  padding-right: 9px;
-  font-size: 2rem;
-  color: #ca4545;
-}
-.special_city {
-  width: 12rem;
-} */
  #goverments {
   margin: 3rem 0rem;
 }
@@ -519,6 +494,7 @@ li .dropdown-toggle {
   display: flex;
   justify-content: center;
   gap: 4%;
+  margin-top: 2rem;
 }
 .services_type {
   display: flex;
@@ -526,9 +502,9 @@ li .dropdown-toggle {
   align-items: center;
   justify-content: center;
   gap: 5%;
-  width: 17%;
+  width: 27%;
   padding: 0rem 2rem;
-  height: 34vh;
+  height: 35vh;
   text-align: center;
   border: 0px solid transparent;
   border-radius: 8px;
@@ -611,8 +587,9 @@ li .dropdown-toggle {
   margin-bottom: 20px;
 }
 .custom-carousel-container {
+  margin-top: 2rem;
   width: 100%;
-  height: 33vh;
+  height: 36vh;
   overflow: hidden;
   position: relative;
 }
@@ -1075,7 +1052,7 @@ footer {
   font-weight: 500;
   color: #ffffffa1;
   font-size: 18px;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
 }
 .footer2 span {
   font-weight: 600;
@@ -1476,7 +1453,7 @@ footer img {
   justify-content: center;
   align-items: center;
   background-color: black;
-  padding: 3rem 1rem 0rem;
+  padding: 3rem 1rem 3rem;
 }
 .project-link {
   color: white;

@@ -60,13 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
     startCounter(span, targetNumber);
   });
 
-  // Trigger border animation when the counter starts
-  const circles = document.querySelectorAll(".circle");
-  circles.forEach((circle) => {
-    circle.style.animation = "rotateBorder 3s linear forwards";
-  });
-
-  // Rest of your existing JavaScript code...
 });
 document.addEventListener("DOMContentLoaded", function () {
   const govSection = document.querySelector(".goverments_child");
