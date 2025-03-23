@@ -353,6 +353,8 @@ li .dropdown-toggle {
 }
 #pillars {
   margin-top: 50px;
+  width: 100%;
+  height: auto;
 }
 .pillars_box {
   width: 20rem;
@@ -1915,7 +1917,9 @@ form {
   .arrow {
     font-size: 12px;
   }
-
+.special_city{
+  width: 7rem;
+}
   .dropdown-content {
     display: none;
     position: absolute;
@@ -1925,7 +1929,11 @@ form {
     z-index: 1;
     right: 0;
   }
-
+  #pillars {
+    margin-top: 50px;
+    width: 100%;
+    height: 144vh;
+}
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -2057,36 +2065,36 @@ form {
     margin: 0rem 0rem;
 }
   .empty {
-    width: 6rem;
+    width: 4rem;
   }
   .empty::before {
     content: "";
-    width: 3rem;
+    width: 2.5rem;
     display: inline-block;
     border: 2px solid #ca4545;
     height: 0px;
     top: -1.4rem;
-    left: 50%;
+    left: 37%;
     position: relative;
     background-color: #ca4552;
   }
   .empty::after {
     content: "";
-    width: 3rem;
+    width: 2.5rem;
     border: 2px solid #ca4545;
     height: 0px;
-    top: -0.3rem;
-    left: 0rem;
+    top: -1.8rem;
+    left: 1.5rem;
     display: inline-block;
     position: relative;
     background-color: #ca4552;
   }
   .empty1 {
-    width: 6rem;
+    width: 4rem;
   }
   .empty1::before {
     content: "";
-    width: 3rem;
+    width: 2.5rem;
     border: 2px solid #ca4545;
     height: 0px;
     bottom: 1.39rem;
@@ -2097,11 +2105,11 @@ form {
   }
   .empty1::after {
     content: "";
-    width: 3rem;
+    width: 2.5rem;
     border: 2px solid #ca4545;
     height: 0px;
-    bottom: 0.3rem;
-    left: -3rem;
+    bottom: 1.8rem;
+    left: 0rem;
     display: inline-block;
     position: relative;
     background-color: #ca4552;
@@ -2149,7 +2157,7 @@ form {
     align-items: flex-end;
   }
   #about {
-    margin: 2rem;
+    margin: 2rem 1rem;
   }
   .pillars_container {
     margin: 0rem 0rem 58rem 0rem;
@@ -2180,14 +2188,14 @@ form {
     font-size: 0.75rem;
   }
 .sec_services{
-  width: 26%;
+  width: 46%;
 }
 .press-news{
-  width: 28%;
+  width: 45%;
 }
-  .specia_fakel::after {
+  .specia_fakel::before {
     content: "";
-    width: 3rem;
+    width: 2.5rem;
     border: 2px solid #ca4545;
     height: 0px;
     top: -1.8rem;
@@ -2198,45 +2206,46 @@ form {
   }
   .special_fake::before {
     content: "";
-    width: 3rem;
+    width: 2.5rem;
     display: inline-block;
     border: 2px solid #ca4545;
     height: 0px;
     top: -1.4rem;
-    left: 3rem;
+    left: 1.5rem;
     position: relative;
     background-color: #ca4552;
   }
   .special_fake::after {
     content: "";
-    width: 3rem;
+    width: 2.5rem;
     display: inline-block;
     border: 2px solid #ca4545;
     height: 0px;
-    top: -0.3rem;
-    left: 0rem;
+    top: -1.8rem;
+    left: 1.5rem;
     position: relative;
     background-color: #ca4552;
   }
   .special_fake1::after {
     content: "";
-    width: 3rem;
+    width: 2.5rem;
     border: 2px solid #ca4545;
     height: 0px;
-    bottom: 0.3rem;
-    left: -3rem;
+    bottom: 1.8rem;
+    left: 0rem;
     display: inline-block;
     position: relative;
     background-color: #ca4552;
   }
   .goverment-head{
-    width: 28%;
+    width: 43%;
   }
   .container {
     margin-top: 1rem;
 }
   #goverments {
-    margin: 74rem 0rem 0rem;
+    width: 100%;
+    margin: 2rem 0rem 0rem;
 }
   .goverments_child {
     flex-direction: column;
@@ -2248,9 +2257,13 @@ form {
     font-weight: 600;
     flex-direction: column;
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
   .goverments_child div {
-    width: 47%;
+    width: 52%;
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
@@ -2343,31 +2356,31 @@ form {
   }
   .empty-projects1::before {
     content: "";
-    width: 2rem;
+    width: 2.5rem;
     bottom: 1.39rem;
     left: 0rem;
   }
   .empty-projects1::before {
     content: "";
-    width: 2rem;
+    width: 2.5rem;
     bottom: 1.39rem;
     left: 0rem;
   }
   .empty-projects1::after {
     content: "";
-    width: 2rem;
+    width: 2.5rem;
     bottom: 1.39rem;
     left: 0rem;
   }
   .empty-projects::after {
     content: "";
-    width: 2rem;
+    width: 2.5rem;
     top: -1.8rem;
     left: 0.96rem;
   }
   .empty-projects::before {
     content: "";
-    width: 2rem;
+    width: 2.5rem;
     display: inline-block;
     top: -1.4rem;
     left: 32%;
@@ -2414,7 +2427,7 @@ form {
   .carousel-inner {
     position: relative;
     width: 100%;
-    height: 48vh;
+    height: 37vh;
     overflow: hidden;
   }
   .carrer_head:nth-child(2) {
