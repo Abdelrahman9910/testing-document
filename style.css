@@ -2061,8 +2061,8 @@ form {
   .sec_head1 {
     font-size: 18px;
     text-align: center;
-    width: 42%;
-    margin: 0rem 0rem;
+    width: fit-content;
+    margin: 0rem 0.25rem;
 }
   .empty {
     width: 4rem;
@@ -2188,10 +2188,12 @@ form {
     font-size: 0.75rem;
   }
 .sec_services{
-  width: 46%;
+  width: fit-content;
+  margin: 0px 0.25rem;
 }
 .press-news{
-  width: 45%;
+  width: fit-content;
+  margin: 0px 0.25rem;
 }
   .specia_fakel::before {
     content: "";
@@ -2238,7 +2240,7 @@ form {
     background-color: #ca4552;
   }
   .goverment-head{
-    width: 43%;
+    width: 37%;
   }
   .container {
     margin-top: 1rem;
