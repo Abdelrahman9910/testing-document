@@ -306,6 +306,62 @@ function expandDiv(childNumber) {
       description: "Job 1 description goes here.",
       specifications: ["Spec 1 for Job 1", "Spec 2 for Job 1"]
     },
+    8: {
+      title: "إدخال البيانات",
+      level: "المستوى المتوسط",
+      location: "القاهرة",
+      country: "مصر",
+      description: "وصف الوظيفة 1 يظهر هنا.",
+      specifications: ["المواصفات 1 للوظيفة 1", "المواصفات 2 للوظيفة 1"]
+    },
+    9: {
+      title: "مطور برمجيات",
+      level: "خبير",
+      location: "ألاسكندرية",
+      country: "مصر",
+      description: "وصف الوظيفة 1 يظهر هنا.",
+      specifications: ["المواصفات 1 للوظيفة 1", "المواصفات 2 للوظيفة 1"]
+    },
+    10: {
+      title: "مصمم جرافيك",
+      level: "مبتداء",
+      location: "الجيزة",
+      country: "مصر",
+      description: "وصف الوظيفة 1 يظهر هنا.",
+      specifications: ["المواصفات 1 للوظيفة 1", "المواصفات 2 للوظيفة 1"]
+    },
+    11: {
+      title: "مدير مشروعات",
+      level: "خبير",
+      location: "الأقصر",
+      country: "مصر",
+      description: "وصف الوظيفة 1 يظهر هنا.",
+      specifications: ["المواصفات 1 للوظيفة 1", "المواصفات 2 للوظيفة 1"]
+    },
+    12: {
+      title: " أحصائي تسويق",
+      level: "المستوى المتوسط",
+      location: "أسوان",
+      country: "مصر",
+      description: "وصف الوظيفة 1 يظهر هنا.",
+      specifications: ["المواصفات 1 للوظيفة 1", "المواصفات 2 للوظيفة 1"]
+    },
+    13: {
+      title: "دعم فني",
+      level: "مبتداء",
+      location: "بورسعيد",
+      country: "مصر",
+      description: "وصف الوظيفة 1 يظهر هنا.",
+      specifications: ["المواصفات 1 للوظيفة 1", "المواصفات 2 للوظيفة 1"]
+    },
+    14: {
+      title: "مدير مبيعات",
+      level: "المستوى المتوسط",
+      location: "السويس",
+      country: "مصر",
+      description: "وصف الوظيفة 1 يظهر هنا.",
+      specifications: ["المواصفات 1 للوظيفة 1", "المواصفات 2 للوظيفة 1"]
+    },
     // Add data for other jobs here...
   };
 
