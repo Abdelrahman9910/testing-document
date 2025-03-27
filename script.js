@@ -169,21 +169,71 @@ if (slidesContainer) {
 }
 
 // Iframe functionality
-const iframeContainer = document.querySelector('.iframe-fallback');
-if (iframeContainer) {
-  const iframe = iframeContainer.querySelector('.lazy-iframe');
-  const videoThumbnail = iframeContainer.querySelector('.video-thumbnail');
-  const playButton = iframeContainer.querySelector('.play-button');
+// const iframeContainer = document.querySelector('.iframe-fallback');
+// if (iframeContainer) {
+//   const iframe = iframeContainer.querySelector('.lazy-iframe');
+//   const videoThumbnail = iframeContainer.querySelector('.video-thumbnail');
+//   const playButton = iframeContainer.querySelector('.play-button');
 
-  iframeContainer.addEventListener('click', function () {
+//   iframeContainer.addEventListener('click', function () {
+//     if (iframe && videoThumbnail && playButton) {
+//       iframe.src = iframe.getAttribute('data-src');
+//       videoThumbnail.style.display = 'none';
+//       playButton.style.display = 'none';
+//       iframe.style.display = 'block';
+//     }
+//   });
+// }
+// Iframe functionality - Modified to handle all iframe containers
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle all iframe containers
+  const iframeContainers = document.querySelectorAll('.iframe-fallback');
+  
+  iframeContainers.forEach(container => {
+    const iframe = container.querySelector('.lazy-iframe');
+    const videoThumbnail = container.querySelector('.video-thumbnail');
+    const playButton = container.querySelector('.play-button');
+    
+    // Only proceed if all elements exist
     if (iframe && videoThumbnail && playButton) {
-      iframe.src = iframe.getAttribute('data-src');
-      videoThumbnail.style.display = 'none';
-      playButton.style.display = 'none';
-      iframe.style.display = 'block';
+      // Add click handler to each container
+      container.addEventListener('click', function() {
+        // Only load iframe if it hasn't been loaded yet
+        if (!iframe.src) {
+          iframe.src = iframe.getAttribute('data-src');
+        }
+        videoThumbnail.style.display = 'none';
+        playButton.style.display = 'none';
+        iframe.style.display = 'block';
+      });
+      
+      // Initialize with iframe hidden
+      iframe.style.display = 'none';
     }
   });
-}
+
+  // Intersection Observer for lazy loading when scrolled into view
+  const lazyIframes = document.querySelectorAll('.lazy-iframe[data-src]');
+  
+  const iframeObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const iframe = entry.target;
+        if (!iframe.src) {
+          iframe.src = iframe.getAttribute('data-src');
+          observer.unobserve(iframe);
+        }
+      }
+    });
+  }, {
+    rootMargin: '200px', // Load iframes when they're 200px from viewport
+    threshold: 0.1
+  });
+
+  lazyIframes.forEach(iframe => {
+    iframeObserver.observe(iframe);
+  });
+});
 
 // Slider functionality
 function initSlider(sliderId) {
