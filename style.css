@@ -190,7 +190,7 @@ li .dropdown-toggle {
   gap: 0.75%;
 }
 .sec_head1 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   margin-top: -10px;
 }
 .sec_head2 {
@@ -221,7 +221,7 @@ li .dropdown-toggle {
   border: 2px solid #ca4545;
   height: 0px;
   top: -1.4rem;
-  left: 3.8rem;
+  left: 3.75rem;
   position: relative;
   background-color: #ca4552;
 }
@@ -232,7 +232,7 @@ li .dropdown-toggle {
   border: 2px solid #ca4545;
   height: 2px;
   top: -29px;
-  left: 3.8rem;
+  left: 3.75rem;
   display: inline-block;
   position: relative;
   background-color: #ca4552;
@@ -248,7 +248,7 @@ li .dropdown-toggle {
   width: 8rem;
   border: 2px solid #ca4545;
   height: 0px;
-  bottom: 1.39rem;
+  bottom: 1.4rem;
   left: 0rem;
   display: inline-block;
   position: relative;
@@ -514,9 +514,6 @@ li .dropdown-toggle {
   margin-top: 1rem;
   transition: transform 0.4s ease;
 }
-.services_type_speical {
-  box-shadow: 0px 8px 0px -1px #ca4545;
-}
 .services_type:hover {
   transform: translateY(-30px);
 }
@@ -580,6 +577,7 @@ li .dropdown-toggle {
   color: #ca4545;
 }
 .container {
+  margin: 2rem auto;
   text-align: center;
 }
 .nav-links {
@@ -1040,7 +1038,7 @@ footer {
 .content_child_ar {
   align-items: end;
 }
-.content_child_ar span:nth-child(1){
+.content_child_ar span:nth-child(1) {
   text-align: end;
 }
 .footer1,
@@ -1136,7 +1134,6 @@ footer img {
 }
 .content_child span:nth-child(1) {
   padding-bottom: 2.2rem;
-  color: white;
   width: 31rem;
 }
 .content_child div:nth-child(2) {
@@ -1156,7 +1153,9 @@ footer img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 10px;
 }
 .projects_head {
   display: flex;
@@ -1169,7 +1168,6 @@ footer img {
 .projects_head span {
   font-size: 2.5rem;
   font-weight: 500;
-  color: white;
 }
 .empty-project {
   width: 9rem;
@@ -1233,7 +1231,7 @@ footer img {
   width: 100%;
   margin-top: 2.5rem;
 }
-.iframe-fallback{
+.iframe-fallback {
   max-width: 41%;
   height: auto;
   min-height: 35vh;
@@ -1242,7 +1240,7 @@ footer img {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
-  border: 4px solid black;
+  border: 3px solid #ca4545;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -1310,11 +1308,18 @@ footer img {
 }
 .clients {
   font-weight: 500;
-  color: white !important;
 }
 .project-sec1 {
-  background-color: black;
+  background-color: white;
+  width: 75vw;
+  margin: 0rem auto 0rem;
   height: 100vh;
+  border: 1px solid transparent;
+  border-radius: 11px;
+}
+.project-container{
+  position: relative;
+  top: -6rem;
 }
 .project_preview {
   margin: 4rem 0rem;
@@ -1333,7 +1338,6 @@ footer img {
   overflow: hidden;
   height: 33vh;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 20px auto;
 }
 /* Dropdown container */
@@ -1354,7 +1358,22 @@ footer img {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
+.projects-alignment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projects-alignment1 {
+  text-align: center;
+  background: white;
+  width: 75%;
+  margin: -5rem 0rem 0rem;
+  border: 0px solid transparent;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 4.5rem 0rem 0rem;
+}
 /* Dropdown items */
 .project-dropdown-item {
   display: block;
@@ -1369,10 +1388,12 @@ footer img {
   border-bottom: 2px solid #ca4545;
 }
 .projects-header {
-  height: 20vh;
-  background: black;
+  height: 57vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./images/projectss.png);
+  background-size: cover;
 }
-/* Show the dropdown menu when active */
 .project-dropdown-menu.active {
   display: block;
   border-radius: 3px;
@@ -1387,7 +1408,8 @@ footer img {
 .project-slide {
   min-width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 3rem;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
@@ -1395,10 +1417,10 @@ footer img {
 .project-slide img {
   width: 27%;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid #ca4545;
 }
 .project-lang_li-ar img {
-  margin: 0px 6px 0px -9px;
+  margin: 0px 6px 0px -9px !important;
 }
 .project-indicators {
   position: absolute;
@@ -1462,14 +1484,22 @@ footer img {
   display: block;
 }
 /* Portfolio Container */
+.projects-body {
+  background-color: #ececec;
+}
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  gap: 5rem; /* Space between project items */
+  gap: 3.5rem;
+  width: 75%;
+  border: 0px solid transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: white;
   justify-content: center;
   align-items: center;
-  background-color: black;
   padding: 3rem 1rem 3rem;
+  margin: 0rem 0rem 2rem;
 }
 .project-link {
   color: white;
@@ -1485,13 +1515,22 @@ footer img {
 /* Project Item */
 .project-item {
   position: relative;
-  width: 28.75rem;
-  height: 18.5rem;
+  width: 22.5rem;
+  height: 21.7rem;
   overflow: hidden; /* Ensures the overlay doesn't overflow */
   border-radius: 10px;
-  border: 1px solid white;
+  border: 3px solid #ca4545;
+}
+.projects-text {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  position: relative;
+  top: 64%;
+  left: 12%;
 }
 .project1-details {
+  text-align: center;
   text-decoration: none;
 }
 .project-name {
@@ -1643,10 +1682,13 @@ footer img {
 }
 .carrer_head:nth-child(1) {
   font-size: 3rem;
+  font-weight: bolder;
+  padding: 0rem 0.5rem 0rem 0rem;
 }
 .carrer_head:nth-child(2) {
   font-size: 3rem;
   color: #ca4552;
+  font-weight: bolder;
 }
 .job_desc:nth-child(1) {
   font-size: 1.4rem;
@@ -2373,8 +2415,25 @@ form {
     margin: 4rem 0rem 5rem;
   }
   .projects-header {
-    height: 10vh;
+    height: 40vh;
   }
+  .projects-text {
+    font-size: 2rem;
+    top: 64%;
+    left: 12%;
+}
+.project-container {
+  position: relative;
+  top: -4rem;
+}
+.project_content {
+  flex-direction: column-reverse;
+}
+.content_child {
+  max-width: 100%;
+  padding: 0rem 0rem 0rem 1rem;
+  
+}
   .services_container {
     flex-wrap: wrap;
     gap: 4rem;
@@ -2431,9 +2490,36 @@ form {
     height: 30.5vh;
   }
   .iframe-fallback {
-    width: 75.5%;
+    max-width: 80%;
+    margin: 0rem 0rem 0rem 0.75rem;
     height: 31.5vh;
   }
+  .project-sec1 {
+    height: auto;
+    border-radius: 0px;
+  }
+  #fish{
+    border: 1px solid transparent;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  #hibs{
+    border: 1px solid transparent;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .project-slider {
+    height: 20vh;
+  }
+  .project-slide {
+    min-width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.project-slide img{
+  width: 45%;
+}
   .projects_head span {
     font-size: 1rem;
     text-align: center;
@@ -2487,7 +2573,8 @@ form {
   .content_child span:nth-child(1) {
     padding-bottom: 1.1rem;
     font-size: 9px;
-    color: white;
+    width: 82%;
+    line-height: 16px;
   }
   .content_child div:nth-child(2) {
     padding-bottom: 0.5rem;
@@ -2502,6 +2589,7 @@ form {
   .content_child div:nth-child(5) {
     padding-bottom: 0.5rem;
   }
+  
   .clients {
     font-size: 8px;
   }
@@ -2864,8 +2952,8 @@ form {
     display: none;
   }
   .lang_li img {
-    margin: 4px -16px 0px 6px;
-  }
+    margin: 1px 0px 0px 6px;
+}
   .slide4 {
     background-position: 0px 0px;
   }
@@ -2874,8 +2962,7 @@ form {
     display: none;
   }
   .projects-header {
-    height: 25vh;
-    background: black;
+    height: 57vh;
   }
   ul {
     justify-content: space-evenly !important ;
@@ -2885,7 +2972,7 @@ form {
     margin-left: 5.7% !important;
   }
   .content_child {
-   justify-content: space-between;
+    justify-content: space-between;
   }
   .container {
     width: 100% !important;
@@ -2951,7 +3038,9 @@ form {
   #goverments {
     margin: 42rem 0rem 8rem;
   }
-
+  .project-lang_li {
+    margin: 0px;
+}
   .services_container {
     flex-wrap: wrap;
     gap: 6%;
@@ -2978,17 +3067,21 @@ form {
   .iframe-fallback {
     max-width: 41%;
     height: auto;
-}
+  }
+  .project-sec1 {
+    background-color: white;
+    width: 85vw;
+  }
   .project-slider {
     position: relative;
-    width: 95vw;
+    width: 75vw;
     overflow: hidden;
-    height: 25vh;
+    height: 20vh;
   }
   .content_child span:nth-child(1) {
     padding-bottom: 2.2rem;
     width: 27rem;
-}
+  }
   .content_child div:nth-child(2) {
     padding-bottom: 0.5rem;
   }

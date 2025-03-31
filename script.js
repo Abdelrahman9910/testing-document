@@ -167,23 +167,6 @@ if (slidesContainer) {
 
   updateCarousel();
 }
-
-// Iframe functionality
-// const iframeContainer = document.querySelector('.iframe-fallback');
-// if (iframeContainer) {
-//   const iframe = iframeContainer.querySelector('.lazy-iframe');
-//   const videoThumbnail = iframeContainer.querySelector('.video-thumbnail');
-//   const playButton = iframeContainer.querySelector('.play-button');
-
-//   iframeContainer.addEventListener('click', function () {
-//     if (iframe && videoThumbnail && playButton) {
-//       iframe.src = iframe.getAttribute('data-src');
-//       videoThumbnail.style.display = 'none';
-//       playButton.style.display = 'none';
-//       iframe.style.display = 'block';
-//     }
-//   });
-// }
 // Iframe functionality - Modified to handle all iframe containers
 document.addEventListener('DOMContentLoaded', function() {
   // Handle all iframe containers
@@ -234,40 +217,6 @@ document.addEventListener('DOMContentLoaded', function() {
     iframeObserver.observe(iframe);
   });
 });
-
-// Slider functionality
-function initSlider(sliderId) {
-  const slider = document.getElementById(sliderId);
-  const slides = slider.querySelector(".project-slides");
-  const indicators = slider.querySelectorAll(".project-indicator");
-  const prevButton = slider.querySelector(".project-prev");
-  const nextButton = slider.querySelector(".project-next");
-  let currentIndex = 0;
-
-  function updateSlider() {
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    indicators.forEach((indicator, index) => {
-      indicator.classList.toggle("active", index === currentIndex);
-    });
-  }
-
-  prevButton.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + indicators.length) % indicators.length;
-    updateSlider();
-  });
-
-  nextButton.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % indicators.length;
-    updateSlider();
-  });
-
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener("click", () => {
-      currentIndex = index;
-      updateSlider();
-    });
-  });
-}
 
 // Initialize all sliders
 for (let i = 1; i <= 30; i++) {
