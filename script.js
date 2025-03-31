@@ -220,8 +220,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize all sliders
 for (let i = 1; i <= 30; i++) {
-  initSlider(`slider-${i}`);
+  const sliderElement = document.getElementById(`slider-${i}`);
+  if (sliderElement) {
+    initSlider(`slider-${i}`);
+  } else {
+    console.warn(`Slider slider-${i} not found, skipping initialization.`);
+  }
 }
+
 
 // Project language dropdown functionality
 function projectToggleLanguageDropdown() {
@@ -389,3 +395,59 @@ function closePopout() {
   });
   popout.classList.remove('active');
 }
+    document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM fully loaded, script running...");
+
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.press-slide');
+        const slider = document.getElementById('press-slider');
+        const indicatorsContainer = document.getElementById('press-indicators');
+        const prevButton = document.getElementById("press-prev");
+        const nextButton = document.getElementById("press-next");
+
+        if (!slider || slides.length === 0) {
+            console.error("Slider or slides not found!");
+            return;
+        }
+
+        function updateSlider() {
+            console.log(`Updating slider: currentIndex = ${currentIndex}`);
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            document.querySelectorAll('.press-indicator').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function nextSlide() {
+            console.log("Next slide clicked");
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            console.log("Previous slide clicked");
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        slides.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.classList.add('press-indicator');
+            if (index === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+            });
+            indicatorsContainer.appendChild(indicator);
+        });
+
+        if (prevButton && nextButton) {
+            prevButton.addEventListener("click", prevSlide);
+            nextButton.addEventListener("click", nextSlide);
+        } else {
+            console.error("Navigation buttons not found!");
+        }
+
+        console.log("Script setup complete.");
+    });
+
