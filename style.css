@@ -1518,6 +1518,9 @@ footer img {
   top: 64%;
   left: 12%;
 }
+.projects-text-ar{
+  left: 74%;
+}
 .project1-details {
   text-align: center;
   text-decoration: none;
@@ -2103,7 +2106,7 @@ form {
   }
   .logo img {
     width: 4rem;
-    margin: -0.25rem 0rem 0rem -0.5rem;
+    margin: 0rem 0rem 0rem -0.5rem;
   }
   footer {
     gap: 1rem;
@@ -2254,6 +2257,7 @@ form {
   }
   #about {
     margin: 2rem 1rem;
+    background-repeat: no-repeat;
   }
   .pillars_container {
     margin: 0rem 0rem 58rem 0rem;
