@@ -451,3 +451,20 @@ function closePopout() {
         console.log("Script setup complete.");
     });
 
+document.getElementById('web3form')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = e.target.querySelector('[type="submit"]');
+    submitBtn.disabled = true;
+    
+    try {
+        const response = await fetch(e.target.action, {
+            method: 'POST',
+            body: new FormData(e.target)
+        });
+        alert(response.ok ? 'Success!' : 'Error: ' + response.status);
+    } catch (error) {
+        alert('Network error');
+    } finally {
+        submitBtn.disabled = false;
+    }
+});
