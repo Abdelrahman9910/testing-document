@@ -2256,8 +2256,11 @@ form {
   }
   #about {
     margin: 2rem 1rem;
+    background-image: url(./images/Artboard\1.svg);
+    background-position: -109px -84px;
+    background-size: 28rem 64rem;
     background-repeat: no-repeat;
-  }
+}
   .pillars_container {
     margin: 0rem 0rem 58rem 0rem;
     gap: 5rem;
