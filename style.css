@@ -1504,7 +1504,7 @@ footer img {
 /* Project Item */
 .project-item {
   position: relative;
-  width: 22.5rem;
+  width: 26%;
   height: 21.7rem;
   overflow: hidden; /* Ensures the overlay doesn't overflow */
   border-radius: 10px;
