@@ -1932,9 +1932,6 @@ form {
   height: 3rem !important;
   margin-top: 8px;
 }
-.side-nav{
-  display: none;
-}
 @media (min-width: 320px) and (max-width: 500px) {
   .carousel {
     display: flex;
@@ -2048,7 +2045,7 @@ form {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1050;
+    z-index: 99999;
     top: 0;
     left: 0;
     background-color: #111;
